@@ -1,0 +1,32 @@
+# Multi-Tenant Employee Management SaaS
+
+A B2B SaaS where each company registers, manages its own employees, departments and leave requests, and can never see another company's data.
+
+## Screenshots
+
+| Login | Register |
+|---|---|
+| ![Login](screenshots/login.png) | ![Register](screenshots/register.png) |
+
+| Employees | Departments |
+|---|---|
+| ![Employees](screenshots/employees.png) | ![Departments](screenshots/departments.png) |
+
+| Leaves | Users |
+|---|---|
+| ![Leaves](screenshots/leaves.png) | ![Users](screenshots/users.png) |
+
+## Features
+- Company self-registration with its own roles and admin
+- JWT authentication; the tenant ID comes only from the verified token
+- Role-based permissions (Company Admin, HR Manager, Manager, Employee)
+- Tenant-isolated employees, departments and leave workflow
+- Permission-aware React UI
+
+## Tech stack
+Java 25, Spring Boot, Spring Security, JWT, Spring Data JPA, MySQL, React (Vite)
+
+## Run locally
+1. Create the database: `CREATE DATABASE saas_db;`
+2. Backend: `cd backend` then `mvnw spring-boot:run`
+3. Open http://localhost:8080
